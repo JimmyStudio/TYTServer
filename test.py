@@ -722,11 +722,11 @@ config = {
       "type": "function"
     }
   ],
-  "address": "0xf12b5dd4ead5f743c6baa640b0216200e89b60da",
+  "address": "0x6bA6d37De43F3e0cD82E4cdE94be1BA724F3D90f",
 }
 web3 = Web3(HTTPProvider('http://127.0.0.1:8545'))
-# owner = web3.eth.accounts[0]
-# print(owner)
+owner = web3.eth.accounts[1]
+print(owner)
 # user1 = web3.eth.accounts[1]
 # user2 = web3.eth.accounts[2]
 # user3 = web3.eth.accounts[3]
@@ -734,13 +734,15 @@ web3 = Web3(HTTPProvider('http://127.0.0.1:8545'))
 # user5 = web3.eth.accounts[5]
 # user6 = web3.eth.accounts[6]
 
+ul = web3.personal.unlockAccount(owner, '123456')
+print(ul)
 
-ct = web3.eth.contract(abi=config['abi'], bytecode=config['bytecode'])
-egas = ct.constructor().estimateGas()
-print(egas)
-
-# tx_hash = ct.constructor().transact({'from': owner, 'gas': 4000000, 'gasPrice':10000000000 })
-# tx_receipt = web3.eth.waitForTransactionReceipt(tx_hash)
+# ct = web3.eth.contract(abi=config['abi'], bytecode=config['bytecode'])
+# egas = ct.constructor().estimateGas()
+# print(egas)
+#
+# tx_hash = ct.constructor().transact({'from': owner, 'gas': 4000000, 'gasPrice':2000000000, 'nonce':0})
+# tx_receipt = web3.eth.waitForTransactionReceipt(tx_hash,9999999999999)
 # print(tx_receipt)
 
 
@@ -753,13 +755,17 @@ print(egas)
 #   }
 # )
 
-# ci = web3.eth.contract(address=Web3.toChecksumAddress(config['address']),
-#                                           abi=config['abi'],
-#                                           ContractFactoryClass=ConciseContract)
+ci = web3.eth.contract(address=Web3.toChecksumAddress(config['address']),
+                                          abi=config['abi'],
+                                          ContractFactoryClass=ConciseContract)
 
 # ci.kill(transact={'from': owner})
 # ci.setExchangeFlag(True, transact={'from': owner})
 # ci.setMaxRaiseAmount(200000000000000000000, transact={'from': owner})
+tx_hash = ci.setRaiseRatio(10000000, transact={'from': owner, 'gas': 200000, 'gasPrice':2000000000, 'nonce':1})
+tx_receipt = web3.eth.waitForTransactionReceipt(tx_hash,9999999999999)
+print(tx_receipt)
+
 
 # ci.withdraw(100000000000000000000, transact={'from': owner})
 
