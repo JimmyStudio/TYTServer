@@ -42,7 +42,7 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -56,7 +56,7 @@ config = {
           "type": "string"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -70,7 +70,7 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -84,7 +84,7 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -98,7 +98,7 @@ config = {
           "type": "uint8"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -112,7 +112,7 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -131,7 +131,7 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -145,7 +145,7 @@ config = {
           "type": "string"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -159,7 +159,7 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -173,7 +173,7 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -187,7 +187,7 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -206,7 +206,7 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -220,7 +220,7 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -239,7 +239,7 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -262,7 +262,7 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
@@ -276,13 +276,13 @@ config = {
           "type": "address"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
     {
       "inputs": [],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "constructor"
     },
@@ -292,7 +292,7 @@ config = {
       "type": "fallback"
     },
     {
-      "anonymous": True,
+      "anonymous": False,
       "inputs": [
         {
           "indexed": True,
@@ -305,7 +305,7 @@ config = {
           "type": "address"
         },
         {
-          "indexed": True,
+          "indexed": False,
           "name": "value",
           "type": "uint256"
         }
@@ -314,7 +314,7 @@ config = {
       "type": "event"
     },
     {
-      "anonymous": True,
+      "anonymous": False,
       "inputs": [
         {
           "indexed": True,
@@ -327,7 +327,7 @@ config = {
           "type": "address"
         },
         {
-          "indexed": True,
+          "indexed": False,
           "name": "value",
           "type": "uint256"
         }
@@ -336,10 +336,10 @@ config = {
       "type": "event"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
-          "name": "newAdmin",
+          "name": "_newAdmin",
           "type": "address"
         }
       ],
@@ -350,35 +350,35 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
-          "name": "target",
+          "name": "_target",
           "type": "address"
         },
         {
-          "name": "mintedAmount",
+          "name": "_amount",
           "type": "uint256"
         }
       ],
-      "name": "mintToken",
+      "name": "generateToken",
       "outputs": [
         {
           "name": "",
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_amount",
@@ -392,58 +392,104 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
-          "name": "target",
+          "name": "_target",
           "type": "address"
         },
         {
-          "name": "freeze",
+          "name": "_freeze",
           "type": "bool"
         }
       ],
-      "name": "freezeAccount",
+      "name": "freeze",
       "outputs": [
         {
           "name": "",
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
-          "name": "target",
+          "name": "_target",
           "type": "address"
         },
         {
-          "name": "timestamp",
+          "name": "_timestamp",
           "type": "uint256"
         }
       ],
-      "name": "freezeAccountWithTimestamp",
+      "name": "freezeWithTimestamp",
       "outputs": [
         {
           "name": "",
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
+      "inputs": [
+        {
+          "name": "_targets",
+          "type": "address[]"
+        },
+        {
+          "name": "_freezes",
+          "type": "bool[]"
+        }
+      ],
+      "name": "multiFreeze",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": False,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": False,
+      "inputs": [
+        {
+          "name": "_targets",
+          "type": "address[]"
+        },
+        {
+          "name": "_timestamps",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "multiFreezeWithTimestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": False,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": False,
       "inputs": [
         {
           "name": "_tos",
@@ -461,12 +507,12 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_to",
@@ -484,12 +530,12 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_from",
@@ -511,12 +557,12 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_spender",
@@ -534,12 +580,12 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_spender",
@@ -557,12 +603,12 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_spender",
@@ -580,8 +626,46 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": True,
+      "inputs": [
+        {
+          "name": "_target",
+          "type": "address"
+        }
+      ],
+      "name": "getFrozenTimestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": False,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": True,
+      "inputs": [
+        {
+          "name": "_target",
+          "type": "address"
+        }
+      ],
+      "name": "getFrozenAccount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": False,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -594,15 +678,53 @@ config = {
           "type": "uint256"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "view",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
-          "name": "flag",
+          "name": "_value",
+          "type": "string"
+        }
+      ],
+      "name": "setName",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": False,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": False,
+      "inputs": [
+        {
+          "name": "_value",
+          "type": "string"
+        }
+      ],
+      "name": "setSymbol",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": False,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": False,
+      "inputs": [
+        {
+          "name": "_flag",
           "type": "bool"
         }
       ],
@@ -613,12 +735,12 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_value",
@@ -632,12 +754,12 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_value",
@@ -651,12 +773,12 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_value",
@@ -670,12 +792,12 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_value",
@@ -689,12 +811,12 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [
         {
           "name": "_value",
@@ -708,34 +830,36 @@ config = {
           "type": "bool"
         }
       ],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": True,
+      "constant": False,
       "inputs": [],
       "name": "kill",
       "outputs": [],
-      "payable": True,
+      "payable": False,
       "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "address": "0x6bA6d37De43F3e0cD82E4cdE94be1BA724F3D90f",
+  "address": "0x345ca3e014aaf5dca488057592ee47305d9b3e10",
 }
 web3 = Web3(HTTPProvider('http://127.0.0.1:8545'))
-owner = web3.eth.accounts[1]
+owner = web3.eth.accounts[0]
 print(owner)
-# user1 = web3.eth.accounts[1]
-# user2 = web3.eth.accounts[2]
-# user3 = web3.eth.accounts[3]
-# user4 = web3.eth.accounts[4]
-# user5 = web3.eth.accounts[5]
-# user6 = web3.eth.accounts[6]
+user1 = web3.eth.accounts[1]
+user2 = web3.eth.accounts[2]
+user3 = web3.eth.accounts[3]
+user4 = web3.eth.accounts[4]
+user5 = web3.eth.accounts[5]
+user6 = web3.eth.accounts[6]
 
-ul = web3.personal.unlockAccount(owner, '123456')
-print(ul)
+print(web3.fromWei(20000000000000000000000,'ether'))
+
+# ul = web3.personal.unlockAccount(owner, '123456')
+# print(ul)
 
 # ct = web3.eth.contract(abi=config['abi'], bytecode=config['bytecode'])
 # egas = ct.constructor().estimateGas()
@@ -745,44 +869,87 @@ print(ul)
 # tx_receipt = web3.eth.waitForTransactionReceipt(tx_hash,9999999999999)
 # print(tx_receipt)
 
-
+# tx = web3.eth.sendTransaction({
+#   'to': Web3.toChecksumAddress(config['address']),
+#   'from': user1,
+#   'value': 1000000000000000,
+#   'gas': 200000,
+#   'gasPrice':10000000000
+#   }
+# )
+#
 # tx = web3.eth.sendTransaction({
 #   'to': Web3.toChecksumAddress(config['address']),
 #   'from': user2,
-#   'value': 20000000000000000000,
+#   'value': 1500000000000000000,
+#   'gas': 200000,
+#   'gasPrice':10000000000
+#   }
+# )
+# tx = web3.eth.sendTransaction({
+#   'to': Web3.toChecksumAddress(config['address']),
+#   'from': user3,
+#   'value': 10000000000000000,
+#   'gas': 200000,
+#   'gasPrice':10000000000
+#   }
+# )
+#
+# tx = web3.eth.sendTransaction({
+#   'to': Web3.toChecksumAddress(config['address']),
+#   'from': user4,
+#   'value': 15000000000000000000,
+#   'gas': 200000,
+#   'gasPrice':10000000000
+#   }
+# )
+#
+# tx = web3.eth.sendTransaction({
+#   'to': Web3.toChecksumAddress(config['address']),
+#   'from': user5,
+#   'value': 23200000000000000000,
 #   'gas': 200000,
 #   'gasPrice':10000000000
 #   }
 # )
 
-ci = web3.eth.contract(address=Web3.toChecksumAddress(config['address']),
-                                          abi=config['abi'],
-                                          ContractFactoryClass=ConciseContract)
+# ci = web3.eth.contract(address=Web3.toChecksumAddress(config['address']),
+#                                           abi=config['abi'],
+#                                           ContractFactoryClass=ConciseContract)
+
+# print(ci.getFrozenAccount(user1))
+# print(ci.getFrozenAccount(user2))
+# print(ci.getFrozenTimestamp(user3))
+# print(ci.getFrozenTimestamp(user4))
+
+# ci.generateToken(owner,1000000000000000000000000000, transact={'from': user1, 'gas': 200000, 'gasPrice':2000000000})
+
+# ci.freeze(user1, False, transact={'from': user1, 'gas': 200000, 'gasPrice':2000000000})
+# ci.multiFreeze([user1,user2],[True, True],transact={'from': owner, 'gas': 200000, 'gasPrice':2000000000})
+# ci.multiFreezeWithTimestamp([user3,user4],[1529479800, 1529479800],transact={'from': owner, 'gas': 200000, 'gasPrice':2000000000})
+
+# print(ci.frozenTimestamp(user3))
 
 # ci.kill(transact={'from': owner})
 # ci.setExchangeFlag(True, transact={'from': owner})
 # ci.setMaxRaiseAmount(200000000000000000000, transact={'from': owner})
-tx_hash = ci.setRaiseRatio(10000000, transact={'from': owner, 'gas': 200000, 'gasPrice':2000000000, 'nonce':1})
-tx_receipt = web3.eth.waitForTransactionReceipt(tx_hash,9999999999999)
-print(tx_receipt)
+# tx_hash = ci.setRaiseRatio(10000000, transact={'from': owner, 'gas': 200000, 'gasPrice':2000000000, 'nonce':1})
+# tx_receipt = web3.eth.waitForTransactionReceipt(tx_hash,9999999999999)
+# print(tx_receipt)
 
 
 # ci.withdraw(100000000000000000000, transact={'from': owner})
 
 # print(ci.exchangeFlag())
-# print(ci.getBalance())
+# print(web3.fromWei(ci.getBalance(),'ether'))
 # print(ci.raisedAmount())
 
-# ts = ci.test()
-# print(ts)
-# ft= ci.frozenTimestamp(user3)
-# print(ft)
 
 # ci.decreaseApproval(user3, 1000000000000, transact={'from': user4})
 
 # ci.transferFrom(user4, user0, 2000000000000, transact={'from': user3})
 
-# ci.transfer(user2, 10000000000000, transact={'from': owner, 'gas': 4000000, 'gasPrice':1000000000})
+# ci.transfer(user3, 10000000000000000000, transact={'from': user4, 'gas': 4000000, 'gasPrice':1000000000})
 
 # ci.transfer(user3, 1000000000000, transact={'from': user4})
 
@@ -790,23 +957,21 @@ print(tx_receipt)
 
 # ci.multiTransfer([user0, user2, user3, user4],[10000000000000,10000000000000,10000000000000,10000000000000], transact={'from': owner})
 
-# ci.freezeAccount(user2, True, transact={'from': owner})
 
-
-# tx = ci.changeAdmin(owner, transact={'from': user0})
+# tx = ci.changeAdmin(owner, transact={'from': user1})
 # print(tx)
 # owerb = ci.balanceOf(owner)
-# print(owerb)
+# print(web3.fromWei(owerb,'ether'))
 # owerb = ci.balanceOf(user1)
-# print(owerb)
+# print(web3.fromWei(owerb,'ether'))
 # owerb = ci.balanceOf(user2)
-# print(owerb)
+# print(web3.fromWei(owerb,'ether'))
 # owerb = ci.balanceOf(user3)
-# print(owerb)
+# print(web3.fromWei(owerb,'ether'))
 # owerb = ci.balanceOf(user4)
-# print(owerb)
+# print(web3.fromWei(owerb,'ether'))
 # owerb = ci.balanceOf(user5)
-# print(owerb)
+# print(web3.fromWei(owerb,'ether'))
 # owerb = ci.balanceOf(user6)
 # print(owerb)
 # owerb = ci.allowance(user4, user3)
